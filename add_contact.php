@@ -2,7 +2,6 @@
 error_reporting(E_ALL);
 ini_set('display_errors', true); //показывает ошибки
 
-
 //class Contact//ооп пример
 //{
 //    public $name;
@@ -68,6 +67,11 @@ function addNewContact ($contact)
     }
     mysqli_close($db);
 }
+$contact = [
+         "name" => '',
+         "number" => '',
+         "date" => '',
+     ];//очистка данных формы
 
 
 $errors = [];

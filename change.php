@@ -1,5 +1,29 @@
 <?php
-    $contact = ['name'=>"Ivan", 'number'=>"89518787945", 'date'=>"17-12-2017"];
+error_reporting(E_ALL);
+ini_set('display_errors', true); //показывает ошибки
+
+
+$db_host = 'localhost';
+$db_user = 'root';
+$db_password = '';
+$db_name = 'contact_manager';
+$db_table = 'contacts';
+
+$db = mysqli_connect($db_host, $db_user, $db_password, $db_name) or die("Не могу создать соединение ");
+$query = mysqli_query("SELECT $contact FROM contacts  WHERE id");
+
+if (isset($_GET['id']));
+
+if ($result = mysqli_query($db, $query)) {
+    /* извлечение ассоциативного массива */
+
+    while ($contact = mysqli_fetch_assoc($result)) {
+        $contact=[];
+    }
+    mysqli_free_result($result);
+
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
