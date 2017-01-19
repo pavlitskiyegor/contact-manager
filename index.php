@@ -20,6 +20,7 @@ if ($result = mysqli_query($db, $query)) {
     mysqli_free_result($result);
 
 }
+
 //$file_contacts = "files/contacts.json";//старый метод вывода информации.
 //$contacts_json = file_get_contents($file_contacts);
 //$all_contacts = json_decode($contacts_json, true);
