@@ -10,20 +10,23 @@ $db_name = 'contact_manager';
 $db_table = 'contacts';
 
 $db = mysqli_connect($db_host, $db_user, $db_password, $db_name) or die("Не могу создать соединение ");
-$query = mysqli_query("SELECT $contact FROM contacts  WHERE id");
 
-if (isset($_GET['id']));
+$query = mysqli_query($db, "SELECT $contact FROM contacts  WHERE id");
 
-if ($result = mysqli_query($db, $query)) {
-    /* извлечение ассоциативного массива */
+var_dump($_GET);
 
-    while ($contact = mysqli_fetch_assoc($result)) {
-        $contact=[];
-    }
-    mysqli_free_result($result);
+//if (isset($_GET['id']));
+//
+//if ($result = mysqli_query($db, $query)) {
+//    /* извлечение ассоциативного массива */
+//
+//    while ($contact = mysqli_fetch_assoc($result)) {
+//        $contact=[];
+//    }
+//    mysqli_free_result($result);
 
 
-}
+//}
 ?>
 <!DOCTYPE html>
 <html lang="en">
